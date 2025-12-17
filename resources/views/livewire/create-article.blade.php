@@ -70,12 +70,12 @@
 
                 <div class="row border border-5 rounded">
                     @foreach ($images as $key => $image)
-                        <div class="col d-flex flex-column justify-content-center align-items-center mb-2">
+                        <div class="col-12 d-flex flex-column justify-content-center align-items-center my-3 mb-3">
                             <div class="img-preview mx-auto shadow rounded" style="background-image: url('{{ $image->temporaryUrl() }}');">
                                 <!-- div per far apparire l'immagine preview -->
                             </div>
                             
-                            <button type="button" class="btn btn-danger btn-sm mt-2" wire:click="removeImage({{ $key }})">{{ __('ui.remove_img') }}</button>
+                            <button type="button" class="btn btn-danger btn-sm my-3" wire:click="removeImage({{ $key }})">{{ __('ui.remove_img') }}</button>
                         </div>
                     @endforeach
                 </div>

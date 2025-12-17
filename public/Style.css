@@ -70,12 +70,13 @@ select.form-select:invalid {
 }
 
 
-/* Stile per l'anteprima immagine */
+/* Stile per l'anteprima immagine - responsive */
 .img-preview {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1; /* Mantiene proporzioni quadrate */
     border-radius: 0.5rem;
+    overflow: hidden;
 }
