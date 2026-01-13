@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="col-md-8 ps-3">
-                        <div class="card-body">
+                        <div class="card-body text-light">
 
                             <h4 class="text-light">{{ __('ui.ratings') }}</h4>
 

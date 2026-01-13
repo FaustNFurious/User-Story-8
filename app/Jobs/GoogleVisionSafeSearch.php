@@ -3,7 +3,7 @@
 namespace App\Jobs;
 
 use App\Models\Image;
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Foundation\Queue\Queueable;
@@ -68,7 +68,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
         // il job aggiorna l'istanza del modello Image ($i) con i nomi delle classi di icone mappate per ogni categoria
         $i->adult = $likelihoodName[$adult];
-        $i->spoofed = $likelihoodName[$spoof];
+        $i->spoof = $likelihoodName[$spoof];
         $i->medical = $likelihoodName[$medical];
         $i->violence = $likelihoodName[$violence];
         $i->racy = $likelihoodName[$racy];
